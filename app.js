@@ -21,6 +21,7 @@ function setup(){
     
     $('#score').html(points);
 
+    $('#leaderboards').hide();
     $('#cates').hide();
     $('#logo').hide();
     $('.breaddd').hide();
@@ -50,11 +51,16 @@ function setup(){
     var trombo = new Audio('audio/fail/sadtrombone.mp3')
 
     var failsound = [yourwrong,frog,trombo];
+   
+    // $('#practice').click(function(){
+    //     $('#return').hide();
+
+    // });
 
     $('#start').click(function(){
         $('#firstJumbo').css("padding-bottom", "130px");
         $('#firstJumbo').css("padding-top", "20px");
-        $('#particles-js').css("height", "100vh");
+        $('#particles-js').css("height", "65vh");
 
         $('#start').hide();
 
@@ -356,6 +362,8 @@ function setup(){
         $('#practice').show();
         $('.panel-body').css('background-color', 'white');
         $('#botRow').css('background-color', 'white');
+        $('#ubbtt2').show();
+        $('#leaderboards').hide();
 
         if (random === "cat") {
             $('#defini').html("Definition: a small domesticated carnivorous mammal with soft fur, a short snout and retractile claws. Normally kept as a pet.");
@@ -463,6 +471,17 @@ function setup(){
             playafail.play();
         }
         userInput = '';
+
+    });
+    $('#leaderboards').click(function(){
+    });
+
+    $('.GObutton').click(function(){
+        $('#leaderboards').show();
+    });
+
+    $('#practice').click(function () {
+        $('#ubbtt2').hide();
 
     });
 
